@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h2>Webshop</h2>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Checkout</h1>
+
+    <form id="checkout-form">
+        <input type="text" placeholder="Full name" required>
+        <input type="text" placeholder="Address" required>
+        <input type="text" placeholder="City" required>
+        <input type="text" placeholder="Card number" required>
+        <button type="submit">Place order</button>
+    </form>
+
+    <div id="checkout-message"></div>
+</div>
+
+<footer>Checkout page</footer>
+
+<script src="js/cart.js"></script>
+<script>
+    document.getElementById("checkout-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        clearCart();
+        document.getElementById("checkout-message").innerHTML =
+            '<div class="message success">Order placed successfully</div>';
+    });
+</script>
+</body>
+</html>

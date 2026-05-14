@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h2>Webshop Admin</h2>
+        <div class="links">
+            <a href="index.html">Home</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Admin panel</h1>
+
+    <form id="product-form">
+        <input id="name" type="text" placeholder="Name" required>
+        <textarea id="description" placeholder="Description"></textarea>
+        <input id="price" type="number" step="0.01" placeholder="Price" required>
+        <input id="stock" type="number" placeholder="Stock" required>
+        <select id="active">
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
+        </select>
+        <button type="submit">Add product</button>
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Active</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="admin-products-body"></tbody>
+    </table>
+</div>
+
+<footer>Admin page</footer>
+
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

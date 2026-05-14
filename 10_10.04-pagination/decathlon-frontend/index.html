@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veebipood</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <h2>Veebipood</h2>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="orders.html">Orders</a>
+            <a href="admin.html">Admin</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Products</h1>
+
+    <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+        <select id="category-select">
+            <option value="">All categories</option>
+            <option value="1">Category 1</option>
+            <option value="2">Category 2</option>
+            <option value="3">Category 3</option>
+        </select>
+
+        <select id="sort-select">
+            <option value="id,asc">Default</option>
+            <option value="name,asc">Name A-Z</option>
+            <option value="name,desc">Name Z-A</option>
+            <option value="price,asc">Price low to high</option>
+            <option value="price,desc">Price high to low</option>
+        </select>
+
+        <select id="size-select">
+            <option value="5">5 per page</option>
+            <option value="10">10 per page</option>
+            <option value="20">20 per page</option>
+        </select>
+
+        <button onclick="applyFilters()">Apply</button>
+    </div>
+
+    <div id="product-list" class="grid"></div>
+
+    <div style="margin-top: 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <button id="prev-btn" onclick="prevPage()">Previous</button>
+        <span id="page-info">Page 1 of 1</span>
+        <button id="next-btn" onclick="nextPage()">Next</button>
+    </div>
+</div>
+
+<footer>Simple webshop frontend</footer>
+
+<script src="js/api.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
